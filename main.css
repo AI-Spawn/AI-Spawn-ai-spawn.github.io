@@ -1,0 +1,105 @@
+body,
+/* div.a {
+  font-size: 1005px;
+  font-family: "Roboto", sans-serif ;
+} */
+div.header {
+  font-size: 10vw;
+  color: #FFFFFF;
+}
+
+div.subtitle {
+  font-size: 2.5vw;
+  color: rgb(255, 255, 255);
+
+}
+
+
+img {
+  margin-bottom: -7px
+}
+
+.w3-row-padding img {
+  margin-bottom: 12px
+}
+
+/*<!--Buttons-->*/
+/* .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 1.5vw 3vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+} */
+
+.button {
+  font-size: (1vw * 2);
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 1.5vw 3vw;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 4px;
+  cursor: pointer;
+}
+
+
+
+.youtube {
+  background-color: #FF0000;
+}
+
+.github {
+  background-color: gray;
+}
+
+
+
+header {
+
+  margin: 0px;
+
+}
+
+body {
+  background-color: rgb(153, 153, 153);
+  margin: 0px;
+  padding: 0px;
+}
+
+
+
+
+
+/* socials */
+.socials {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  /* width: 15%; */
+  font-size: 25px;
+padding-right: 100
+
+}
+
+
+.fa {
+  width: 0px;
+
+
+
+
+}
+a{
+
+  text-decoration: none;
+
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<title>BETA: AI Spawn</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-dark-grey.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<script src="https://kit.fontawesome.com/aa243b76d4.js" crossorigin="anonymous"></script>
+</head>
+<style>
+  body,
+  /* div.a {
+    font-size: 1005px;
+    font-family: "Roboto", sans-serif ;
+  } */
+  div.header {
+    font-size: 10vw;
+    color: #FFFFFF;
+  }
+
+  div.subtitle {
+    font-size: 2.5vw;
+    color: rgb(255, 255, 255);
+
+  }
+
+
+  img {
+    margin-bottom: -7px
+  }
+
+  .w3-row-padding img {
+    margin-bottom: 12px
+  }
+
+  /*<!--Buttons-->*/
+  /* .button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 1.5vw 3vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+  } */
+
+  .button {
+    font-size: (1vw * 2);
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 1.5vw 3vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 4px;
+    cursor: pointer;
+  }
+
+
+
+  .youtube {
+    background-color: #FF0000;
+  }
+
+  .github {
+    background-color: gray;
+  }
+
+
+
+  header {
+
+    margin: 0px;
+
+  }
+
+  body {
+    background-color: rgb(153, 153, 153);
+    margin: 0px;
+    padding: 0px;
+  }
+
+
+
+
+
+  /* socials */
+  .socials {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    /* width: 15%; */
+    font-size: 25px;
+padding-right: 100
+
+  }
+
+
+  .fa {
+    width: 0px;
+
+
+
+
+  }
+  a{
+
+    text-decoration: none;
+
+  }
+</style>
+
+<body>
+
+  <!-- Sidebar -->
+  <!-- <nav class="w3-sidebar w3-black w3-animate-top w3-xxlarge" style="display:none;padding-top:150px" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-black w3-xxlarge w3-padding w3-display-topright" style="padding:6px 24px">
+      <i class="fa fa-remove"></i>
+    </a>
+    <div class="w3-bar-block w3-center">
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">About</a>
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Photos</a>
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Shop</a>
+      <a href="#" class="w3-bar-item w3-button w3-text-grey w3-hover-black">Contact</a>
+    </div>
+  </nav> -->
+
+  <!-- !PAGE CONTENT! -->
+
+  <!-- Header -->
+  <!--      <span class="w3-button w3-xxlarge w3-white w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></span> -->
+  <!-- <header class="w3-center w3-margin-bottom"> -->
+
+  <header class="w3-container w3-center w3-theme-d4" style="padding:64px 32px">
+    <div class="header" color="FFFFFF"><b>AI SPAWN</b></div>
+    <div class="subtitle"><b>YouTuber, Software Engineer, All Around Dumbass</b></div>
+    <a href="https://www.youtube.com/channel/UC6NT7CHGhDfkamfMZswuXVQ" class="button youtube">YouTube</a>
+    <a href=" https://github.com/AI-Spawn" class="button github">Github</a>
+  </header>
+
+
+
+
+
+
+
+
+
+
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="displayProjects.js"></script>
+  <script language="javascript" type="text/javascript" src="mousePressed.js"></script>
+  <script language="javascript" type="text/javascript" src="preload.js"></script>
+  <script language="javascript" type="text/javascript" src="scalingFunctions.js"></script>
+  <script language="javascript" type="text/javascript" src="Website.js"></script>
+
+
+
+
+
+  <!-- Footer -->
+
+
+  <script>
+    // Open and close sidebar
+
+    function w3_open() {
+      document.getElementById("mySidebar").style.width = "100%";
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
+
+
+
+
+
+
+
+
+
+  <div class="socials">
+    <a href="https://www.youtube.com/channel/UC6NT7CHGhDfkamfMZswuXVQ" class="fab fa-youtube">
+    </a>
+    <a href="https://discordapp.com/invite/fqmG3n6" class="fab fa-discord">
+    </a>
+    <a href="https://www.twitter.com/AISpawn" class="fab fa-twitter">
+    </a>
+    <a href="https://github.com/AI-Spawn" class="fab fa-github">
+    </a>
+    <a href="https://patreon.com/AISpawn" class="fab fa-patreon">
+    </a>
+    <a href="https://www.youtube.com/" class="fab fa-none">
+    </a>
+    <a href="https://www.youtube.com/" class="fab fa-none">
+    </a>
+  </div>
+
+
+</body>
+
+
+
+
+
+
+
+
+
+
+</html>

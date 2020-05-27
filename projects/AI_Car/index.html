@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<title>I Made an AI Robot - AI Spawn</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-dark-grey.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.3.3/css/foundation.min.css" rel="stylesheet" />
+<link href="../projects.css" rel="stylesheet" />
+
+<style>
+
+</style>
+
+<header class="w3-container w3-center w3-theme-d4">
+  <!-- style="padding:64px 32px" -->
+  <div class="header" color="FFFFFF"><b>I Made an AI Robot</b></div>
+
+  <div style="height:3vw;font-size:100px;"></div>
+  <div class="iframe-wrapper">
+    <div class="iframe-container">
+      <iframe src="https://www.youtube.com/embed/ibmhDiJ1C2U" allowfullscreen></iframe>
+    </div>
+  </div>
+  <div style="height:10.5vw;font-size:100px;"></div>
+
+  <!-- <iframe width="85.3vw" height="48vw" src="https://www.youtube.com/embed/ow5LqJ8x9MU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+
+</header>
+
+<body>
+  <div class="w3-container">
+    <div style="height:0vw;font-size:0px;"></div>
+
+    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="scalingFunctions.js"></script>
+    <script language="javascript" type="text/javascript" src="move.js"></script>
+    <script language="javascript" type="text/javascript" src="keyInputs.js"></script>
+    <script language="javascript" type="text/javascript" src="look.js"></script>
+    <script language="javascript" type="text/javascript" src="respawn.js"></script>
+    <script language="javascript" type="text/javascript" src="calculate.js"></script>
+    <script language="javascript" type="text/javascript" src="think.js"></script>
+    <script language="javascript" type="text/javascript" src="AICar.js"></script>
+    <div style="height:60vw;font-size:100px;"></div>
+    <div class="controls">a : Turn Left</div>
+    <div class="controls">d : Turn Right</div>
+    <div class="controls">f : Toggle whether you can see the track</div>
+    <div class="controls">v : Toggle whether you can see the car's vision</div>
+    <div class="controls">+ : Increase vision accuracy (slower)</div>
+    <div class="controls">- : Decrease vision accuracy (faster)</div>
+
+    <div style="height:1.5vw;font-size:100px;"></div>
+
+
+
+<!--
+    <div id='image-upload' class='w3-red'>
+      <input type="file" id="the-photo-file-field" style="height: 20px;width: 500px;font-size:10px;top:0px;">
+    </div> -->
+    <script>
+      //check if browser supports file api and filereader features
+      if (window.File && window.FileReader && window.FileList && window.Blob) {
+
+        //this is not completely neccesary, just a nice function I found to make the file size format friendlier
+        //http://stackoverflow.com/questions/10420352/converting-file-size-in-bytes-to-human-readable
+        function humanFileSize(bytes, si) {
+          var thresh = si ? 1000 : 1024;
+          if (bytes < thresh) return bytes + ' B';
+          var units = si ? ['kB', 'MB', 'GB', 'TB', 'PB', 'EB', 'ZB', 'YB'] : ['KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB'];
+          var u = -1;
+          do {
+            bytes /= thresh;
+            ++u;
+          } while (bytes >= thresh);
+          return bytes.toFixed(1) + ' ' + units[u];
+        }
+
+
+        //this function is called when the input loads an image
+        function renderImage(file) {
+          var reader = new FileReader();
+          reader.onload = function(event) {
+            the_url = event.target.result
+            // background(0);
+
+            //of course using a template library like handlebars.js is a better solution than just inserting a string
+            // $('#preview').html("<img src='" + the_url + "' />")
+            trackImage = loadImage(the_url);
+
+            adjustTrack = true;
+            adjustStep = 0;
+            ableToProceed = false;
+            trackImage.resize(width, height);
+
+
+            // $('#name').html(file.name)
+            // $('#size').html(humanFileSize(file.size, "MB"))
+            // $('#type').html(file.type)
+          }
+
+          //when the file is read it triggers the onload event above.
+          reader.readAsDataURL(file);
+        }
+
+
+
+
+
+        //watch for change on the
+        $("#the-photo-file-field").change(function() {
+          console.log("photo file has been chosen")
+          //grab the first image in the fileList
+          //in this example we are only loading one file.
+          renderImage(this.files[0])
+
+        });
+
+      }
+    </script>
+    <img source=the_url></img>
+  </div>
+
+
+
+
+  </form>
+  </div>
+
+
+
+  <!-- <div class="socials">
+    <a href="https://www.youtube.com/channel/UC6NT7CHGhDfkamfMZswuXVQ" class="fab fa-youtube">
+    </a>
+    <a href="https://discordapp.com/invite/fqmG3n6" class="fab fa-discord">
+    </a>
+    <a href="https://www.twitter.com/AISpawn" class="fab fa-twitter">
+    </a>
+    <a href="https://github.com/AI-Spawn" class="fab fa-github">
+    </a>
+    <a href="https://patreon.com/AISpawn" class="fab fa-patreon">
+    </a>
+    <a href="https://www.youtube.com/" class="fab fa-none">
+    </a>
+    <a href="https://www.youtube.com/" class="fab fa-none">
+    </a>
+  </div> -->
+</body>
+
+</html>
