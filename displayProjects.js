@@ -1,19 +1,25 @@
-let favs = [4, 3, 2, 0, 1];
-let featured = 4;
+let favs = [5, 4, 3, 2, 0, 1];
+let featured = 5;
 var numPerRow = 4;
 var thumbWidth = 192;
 var thumbHeight = 108;
 
-let projectTitles = ["AI Writes Harry Potter", "Thumbfail", "Alien Pictures", "Brainfuck - UL 1", "I Built an AI Robot"];
-let projectThumbnails = ["harrypotter.jpg", "thumbfail.jpg", "a51.jpg", "brainfuck.jpg", "aicar.png"];
-let projectLink = ["AI_Writes_Harry_Potter", "Thumbfail", "AI_Makes_Aliens", "Brainfuck", "AI_Car"];
-let projectDescription = ["", "Have an AI tell you how good or bad your thumbnail is.", "", "Learn about brainfuck, the best language you'll never use.", "I used NEAT to train virtual cars to drive around a track, then used the trained model to drive a real (robot) car around a real (cardboard) track."]
+let projectTitles = ["AI Writes Harry Potter", "Thumbfail", "Alien Pictures", "Brainfuck - UL 1", "I Built an AI Robot", "Auto-Lip-Syncing"];
+let projectThumbnails = ["harrypotter.jpg", "thumbfail.jpg", "a51.jpg", "brainfuck.jpg", "aicar.png", "lipsync.jpg"];
+let projectLink = ["AI_Writes_Harry_Potter", "Thumbfail", "AI_Makes_Aliens", "Brainfuck", "AI_Car", "Lipsync"];
+let projectDescription = ["", "Have an AI tell you how good or bad your thumbnail is.", "", "Learn about brainfuck, the best language you'll never use.", "I used NEAT to train virtual cars to drive around a track, then used the trained model to drive a real (robot) car around a real (cardboard) track.", "Animating is hard, so I made a bot to do it for me."]
 var rowCounter = 0;
 var cCounter = 0;
 
 var rowGap = 300;
 
+/*
+let projectTitles = ["Automatic Lip Syncing", "AI Writes Harry Potter", "Thumbfail", "Alien Pictures", "Brainfuck - UL 1", "I Built an AI Robot"];
+let projectThumbnails = ["lipsync.jpg", "harrypotter.jpg", "thumbfail.jpg", "a51.jpg", "brainfuck.jpg", "aicar.png"];
+let projectLink = ["Lipsync", "AI_Writes_Harry_Potter", "Thumbfail", "AI_Makes_Aliens", "Brainfuck", "AI_Car"];
+let projectDescription = ["Animation is hard, so I made a bot that does it for me.", "Have an AI tell you how good or bad your thumbnail is.", "", "Learn about brainfuck, the best language you'll never use.", "I used NEAT to train virtual cars to drive around a track, then used the trained model to drive a real (robot) car around a real (cardboard) track."]
 
+*/
 function featuredProject(){
 section = 0;
 textSizeS(70);
